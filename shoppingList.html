@@ -1,0 +1,11 @@
+<!-- <h3>{{ list.title }}</h3> -->
+<br><br><br>
+<ul>
+    <li ng-repeat="item in list.items">
+        {{item.name}} , {{item.short_name}} , {{item.description}}
+        <!-- <button ng-click="list.badRemove($index);">Bad Remove Item</button>  -->
+        <button ng-click="list.onRemove({index:$index});">Don't want this one!</button><br><br>
+    </li>
+</ul>
+<div class="error" ng-if="list.itemInList()">Nothing Found</div>
+<!-- <div class="error" ng-transclude></div> -->
